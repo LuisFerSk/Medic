@@ -3,11 +3,10 @@
 
 #include "../../model/usuario/function.cpp"
 
+using namespace std;
+
 class UsuarioData
 {
-private:
-    string NombreArchivo = "../data/usuario.txt";
-
 public:
     UsuarioData();
     bool verificarAcceso(string, string);

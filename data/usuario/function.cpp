@@ -8,7 +8,7 @@ bool UsuarioData::verificarAcceso(string correo, string password)
 {
     ifstream archivo;
 
-    archivo.open(NombreArchivo, ios::in);
+    archivo.open("../../arhive/usuario.txt", ios::in);
 
     if (archivo.fail())
     {

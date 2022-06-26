@@ -11,14 +11,29 @@ int main(int argc, char **argv)
 
 	do
 	{
-		cout << "Ingrese su correo:" << endl;
-		cin >> usuario.Correo;
-		cout << "Ingrese la contraseÃ±a:" << endl;
-		cin >> usuario.Password;
+		do
+		{
+			system("cls");
+			cout << "Ingrese su correo:";
+			cin >> usuario.Correo;
+			cout << "Ingrese la contraseña:";
+			cin >> usuario.Password;
+		} while (usuarioData.verificarAcceso(usuario.Correo, usuario.Password));
+		int opcion;
+		do
+		{
+			system("cls");
+			cout << "\n1. Registrar consulta general.";
+			cout << "\n2. Registrar consulta individual.";
+			cout << "\n3. Modificar citas.";
+			cout << "\n4. Eliminar cita.";
+			cout << "\n5. Cerrar SesiÃ³n.";
+			cout << "\n\nSelecciones una opción:";
+			cin >> opcion;
+		} while (opcion != 5);
+	} while (true);
 
-	} while (usuarioData.verificarAcceso(usuario.Correo, usuario.Password));
-
-	cout << "ok";
+	cout << "ok" << endl;
 
 	system("pause");
 	return 0;
