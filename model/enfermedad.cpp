@@ -1,23 +1,14 @@
-#include <iostream>
 #include "entity.cpp"
-
-using namespace std;
 
 class Enfermedad : public Entity
 {
-private:
-    string Nombre;
-
 public:
-    string setNombre(string);
-    string getNombre();
+    Enfermedad();
+    Enfermedad(string);
+    string Nombre;
 };
-string Enfermedad::setNombre(string nombre)
+Enfermedad::Enfermedad(){};
+Enfermedad::Enfermedad(string nombre)
 {
     Nombre = nombre;
-    return "El nombre de la enfermedad se ha modificado correctamente.";
-};
-string Enfermedad::getNombre()
-{
-    return Nombre;
 };
